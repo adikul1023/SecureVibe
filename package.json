@@ -1,0 +1,57 @@
+{
+  "name": "securevibe",
+  "displayName": "SecureVibe",
+  "description": "A security-focused VS Code extension that detects potential vulnerabilities in your code",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:securevibe.scanFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "securevibe.scanFile",
+        "title": "Scan Current File for Security Issues"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.13.0",
+    "typescript": "^4.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdiK/SecureVibe.git"
+  },
+  "keywords": [
+    "security",
+    "vulnerability",
+    "code-analysis",
+    "static-analysis"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "license": "MIT"
+} 
